@@ -1,0 +1,8 @@
+Defaulting to user installation because normal site-packages is not writeable
+Collecting numpy
+  Downloading numpy-2.3.1-cp313-cp313-manylinux_2_28_x86_64.whl.metadata (62 kB)
+Requirement already satisfied: pyyaml in /usr/lib/python3/dist-packages (6.0.2)
+Downloading numpy-2.3.1-cp313-cp313-manylinux_2_28_x86_64.whl (16.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.6/16.6 MB 133.1 MB/s eta 0:00:00
+Installing collected packages: numpy
+Successfully installed numpy-2.3.1
