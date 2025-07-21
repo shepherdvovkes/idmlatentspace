@@ -2,7 +2,8 @@
 Configuration management for IDM Latent Space
 """
 
-from pydantic import BaseSettings, Field
+from pydantic import Field
+from pydantic_settings import BaseSettings
 from typing import List, Optional
 import os
 from pathlib import Path
@@ -62,6 +63,7 @@ class Settings(BaseSettings):
     class Config:
         env_file = ".env"
         case_sensitive = True
+        extra = "ignore"  # Ignore extra fields from .env
 
     def __init__(self, **data):
         super().__init__(**data)
@@ -83,7 +85,8 @@ class DevelopmentSettings(Settings):
     LOG_LEVEL: str = "DEBUG"
     
     class Config:
-        env_file = ".env.dev"
+        env_file = ".env"
+        extra = "ignore"
 
 # Production settings  
 class ProductionSettings(Settings):
@@ -94,7 +97,8 @@ class ProductionSettings(Settings):
     ALLOWED_HOSTS: List[str] = ["api.idmlatentspace.com"]
     
     class Config:
-        env_file = ".env.prod"
+        env_file = ".env"
+        extra = "ignore"
 
 # Testing settings
 class TestingSettings(Settings):
@@ -104,7 +108,8 @@ class TestingSettings(Settings):
     REDIS_URL: str = "redis://localhost:6379/1"
     
     class Config:
-        env_file = ".env.test"
+        env_file = ".env"
+        extra = "ignore"
 
 def get_settings() -> Settings:
     """Get settings based on environment"""
