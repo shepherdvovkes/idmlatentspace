@@ -403,9 +403,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Support
 
 - **Email**: vladimir@highfunk.uk
-- **Issues**: [GitHub Issues](https://github.com/username/repository/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/username/repository/discussions)
-- **Documentation**: [Wiki](https://github.com/username/repository/wiki)
+- **Issues**: [GitHub Issues]([https://github.com/shepherdvovkes/idmlatentspace/issues])
+- **Discussions**: [GitHub Discussions](https://github.com/shepherdvovkes/idmlatentspace/discussions)
+- **Documentation**: [Wiki](https://github.com/shepherdvovkes/idmlatentspace/wiki)
 
 ---
 
