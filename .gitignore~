@@ -11,6 +11,10 @@ venv/
 cache/
 results/
 
+# Ableton Live projects
+AbletonProjects/
+*.als
+
 # Generated data files and reports
 *.json
 *.csv
