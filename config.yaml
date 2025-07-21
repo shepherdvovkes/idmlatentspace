@@ -1,0 +1,13 @@
+data_source:
+  midi_path: "./AbletonProjects"
+  cache_path: "./cache/processed_data.pkl"
+
+experiment:
+  latent_dims: [128, 256, 384, 512]
+  results_path: "./results"
+
+model_training:
+  # Эти параметры будут использоваться в реальной модели
+  epochs: 50
+  learning_rate: 0.0001
+  batch_size: 16

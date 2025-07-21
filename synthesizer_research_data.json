@@ -1,0 +1,64 @@
+{
+  "project_info": {
+    "file_name": "A2ML1.als",
+    "file_size": 196158,
+    "analysis_date": "2025-07-20T19:35:41.267927",
+    "ableton_version": null,
+    "project_name": "",
+    "revision": "084dbee3652f97baf4161adb0c48ef5ea8580618"
+  },
+  "synthesizer_tracks": [
+    {
+      "track_name": "1-Osirus",
+      "track_index": 0,
+      "volume": 0.3981071115,
+      "pan": 0.0,
+      "synthesizers": [
+        {
+          "name": "Osirus",
+          "type": "AuPluginDevice",
+          "enabled": true,
+          "plugin_info": {
+            "type": "AU",
+            "manufacturer": "The Usual Suspects",
+            "subtype": null,
+            "type_code": "2"
+          },
+          "preset_name": null,
+          "parameters": [],
+          "cc_mappings": []
+        },
+        {
+          "name": "UADx Century Tube Channel Strip",
+          "type": "AuPluginDevice",
+          "enabled": true,
+          "plugin_info": {
+            "type": "AU",
+            "manufacturer": "Universal Audio (UADx)",
+            "subtype": null,
+            "type_code": "2"
+          },
+          "preset_name": null,
+          "parameters": [],
+          "cc_mappings": []
+        }
+      ],
+      "clips": [],
+      "automation_density": 0
+    }
+  ],
+  "cc_automation_summary": {
+    "total_envelopes": 0,
+    "total_points": 0,
+    "cc_controllers_used": {},
+    "parameter_types": {
+      "filter": [],
+      "lfo": [],
+      "envelope": [],
+      "oscillator": [],
+      "effects": []
+    }
+  },
+  "midi_clips_with_automation": [],
+  "recommended_segments": []
+}

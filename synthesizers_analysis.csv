@@ -1,0 +1,3 @@
+Track,Synthesizer_Name,Plugin_Type,Vendor,Preset,Parameters_Count,Enabled
+1-Osirus,Osirus,AuPluginDevice,The Usual Suspects,,0,True
+1-Osirus,UADx Century Tube Channel Strip,AuPluginDevice,Universal Audio (UADx),,0,True
