@@ -11,6 +11,8 @@ A comprehensive research toolkit for analyzing and generating complex electronic
 ## 🎯 Overview
 
 This application bridges the gap between modern electronic music production and AI-driven music generation by focusing on **timbral performance** rather than just melodic content. It analyzes MIDI+CC automation data from Ableton Live projects and trains Transformer-based β-VAE models with varying latent space dimensionalities (128D to 512D).
+Created Python package https://pypi.org/project/sysex-toolkit/1.0.0/
+
 
 ### Key Features
 
