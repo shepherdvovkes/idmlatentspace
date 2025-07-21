@@ -1,4 +1,4 @@
-# 🎵 Synthesizer Performance Analyzer & ML Research Platform
+# Synthesizer Performance Analyzer & ML Research Platform
 
 > **Comprehensive research platform for analyzing and generating high-dimensional latent spaces in electronic music production**
 
@@ -8,22 +8,22 @@
 ![Status](https://img.shields.io/badge/Status-Research%20Ready-brightgreen)
 ![SysEx](https://img.shields.io/badge/Package-sysex--toolkit-purple)
 
-## 🎯 Project Overview
+## Project Overview
 
 This is a multi-component research platform specializing in analyzing timbral characteristics of electronic music using modern machine learning methods. The project implements methodologies described in research work on β-VAE with Transformer architectures for IDM and Dubstep music.
 
-### 🌟 Key Features
+### Key Features
 
-- **🎛️ MIDI+CC Analysis**: Processing MIDI notes with dense Control Change automation
-- **🧠 High-Dimensional VAE**: Implementation of 384-512D latent spaces for complex timbral encoding  
-- **📊 Research Metrics**: CC Modulation Error, MR-STFT Loss, KL Divergence, Note Accuracy
-- **🎨 Interactive Visualization**: D3.js charts for latent space analysis and CC evolution
-- **📈 Academic Ready**: Generation of publication-ready results and tables
-- **⚡ Complete Pipeline**: From Ableton export to trained models with one command
-- **🔌 Universal SysEx Support**: Work with any synthesizers through configuration files
-- **🎹 Built-in Definitions**: Access Virus C, Roland JP-8000 and others
+- ** MIDI+CC Analysis**: Processing MIDI notes with dense Control Change automation
+- ** High-Dimensional VAE**: Implementation of 384-512D latent spaces for complex timbral encoding  
+- ** Research Metrics**: CC Modulation Error, MR-STFT Loss, KL Divergence, Note Accuracy
+- ** Interactive Visualization**: D3.js charts for latent space analysis and CC evolution
+- ** Academic Ready**: Generation of publication-ready results and tables
+- ** Complete Pipeline**: From Ableton export to trained models with one command
+- ** Universal SysEx Support**: Work with any synthesizers through configuration files
+- ** Built-in Definitions**: Access Virus C, Roland JP-8000 and others
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### System Requirements
 
@@ -92,30 +92,30 @@ sysex-batch /path/to/presets/ --synth access_virus
 
 ```
 synthesizer-performance-analyzer/
-├── 🎹 AbletonProjects/           # Your MIDI files
+├── AbletonProjects/           # Your MIDI files
 │   ├── dubstep_bass_01.mid
 │   ├── idm_glitch_02.mid
 │   └── ...
-├── 🐍 main.py                    # GUI application
-├── 🔄 pipeline.py                # Main analysis backend
-├── 🎨 gui.py                     # PySide6 interface
-├── 📊 data_processor.py          # Data processing
-├── 🤖 model.py                   # Transformer VAE model
-├── 🛠️ utils.py                   # Utilities and visualization
-├── 📋 apa.py                     # Ableton project analyzer
-├── 🎵 audio_ml_analyzer.py       # ML audio analysis
-├── 🎛️ preset_differential_analyzer.py # Preset analysis
-├── 📦 sysex-toolkit/             # Universal SysEx library
+├── main.py                    # GUI application
+├── pipeline.py                # Main analysis backend
+├── gui.py                     # PySide6 interface
+├── data_processor.py          # Data processing
+├── model.py                   # Transformer VAE model
+├── utils.py                   # Utilities and visualization
+├── apa.py                     # Ableton project analyzer
+├── audio_ml_analyzer.py       # ML audio analysis
+├── preset_differential_analyzer.py # Preset analysis
+├── sysex-toolkit/             # Universal SysEx library
 │   ├── sysex_toolkit/
 │   ├── examples/
 │   └── tests/
-├── 📂 Samples/                   # Audio samples
-├── ⚙️ config.yaml                # Configuration parameters
-├── 📖 README.md                  # This file
-└── 📄 kubmlops-3.pdf             # Project description
+├── Samples/                   # Audio samples
+├── config.yaml                # Configuration parameters
+├── README.md                  # This file
+└── kubmlops-3.pdf             # Project description
 ```
 
-## 🎛️ Ableton File Preparation
+## Ableton File Preparation
 
 ### Export Settings
 
@@ -142,7 +142,7 @@ dubstep_bass_01_seg01_140_serum.mid
 idm_glitch_02_seg01_170_massive.mid
 ```
 
-## 📊 Understanding Results
+## Understanding Results
 
 ### Quantitative Metrics
 
@@ -168,7 +168,7 @@ idm_glitch_02_seg01_170_massive.mid
 
 **Key Insight**: High-dimensional latent spaces (384D, 512D) significantly outperform traditional low-dimensional approaches for generating complex timbres.
 
-## 🔬 Research Applications
+## Research Applications
 
 ### Academic Integration
 
@@ -179,12 +179,12 @@ Results can be directly used in LaTeX tables:
 
 ### Hypothesis Validation
 
-- ✅ **High-dimensional superiority**: 384D+ models show significantly lower CC-ME
-- ✅ **Timbral complexity capture**: Complex CC automation requires >256D latent spaces  
-- ✅ **Genre-specific encoding**: IDM vs Dubstep patterns emerge in latent space
-- ✅ **Architecture efficiency**: Transformer + β-VAE handles sequential CC data well
+- **High-dimensional superiority**: 384D+ models show significantly lower CC-ME
+- **Timbral complexity capture**: Complex CC automation requires >256D latent spaces  
+- **Genre-specific encoding**: IDM vs Dubstep patterns emerge in latent space
+- **Architecture efficiency**: Transformer + β-VAE handles sequential CC data well
 
-## 🎨 Visualizations
+## Visualizations
 
 ### Web Interface Capabilities
 
@@ -196,12 +196,12 @@ Results can be directly used in LaTeX tables:
 
 ### Generated Charts
 
-- 📈 **Training Curves** (loss vs epochs)
-- 🎯 **Latent Space Structure** (PCA, t-SNE)
-- 🎛️ **CC Parameter Usage Analysis**
-- 📊 **Performance Comparison** across dimensions
+- **Training Curves** (loss vs epochs)
+- **Latent Space Structure** (PCA, t-SNE)
+- **CC Parameter Usage Analysis**
+- **Performance Comparison** across dimensions
 
-## 🛠️ Advanced Usage
+## Advanced Usage
 
 ### Custom Metrics
 
@@ -269,7 +269,7 @@ feature_matrix = np.array(feature_matrix)
 # Ready for β-VAE training!
 ```
 
-## ⚙️ Configuration
+## Configuration
 
 ### Basic Configuration (`config.yaml`)
 
@@ -295,13 +295,13 @@ For rapid prototyping use `quick_config.yaml` with reduced parameters:
 - 20 epochs
 - Smaller model architecture
 
-## 📦 Supported Synthesizers (SysEx Toolkit)
+## Supported Synthesizers (SysEx Toolkit)
 
 - **Access Virus C** (Full support)
 - **Roland JP-8000** (Basic support)
 - **Custom synthesizers** via configuration files
 
-## 🎵 Use Cases
+## Use Cases
 
 - **Music Production**: Analysis and modification of synthesizer presets
 - **ML Research**: Feature extraction for generative models
@@ -309,7 +309,7 @@ For rapid prototyping use `quick_config.yaml` with reduced parameters:
 - **Sound Design**: Understanding parameter relationships
 - **Academic Research**: Studying electronic music characteristics
 
-## 📋 Dataset Requirements
+## Dataset Requirements
 
 | Metric | Minimum | Recommended |
 |---------|---------|---------------|
@@ -318,7 +318,7 @@ For rapid prototyping use `quick_config.yaml` with reduced parameters:
 | Sequence length | 200 tokens | 500+ tokens |
 | Quality score | 70% | 90%+ |
 
-## 🔧 Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
@@ -345,7 +345,7 @@ model_training:
 - Ensure 4-bar segments are musically coherent  
 - Check for tempo variations between exports
 
-## 📚 Citation
+## Citation
 
 If you use this tool in your research, please cite:
 
@@ -365,7 +365,7 @@ If you use this tool in your research, please cite:
 }
 ```
 
-## 🤝 Contributing
+## Contributing
 
 We welcome contributions! Please see our contribution guidelines:
 
@@ -388,11 +388,11 @@ black *.py
 flake8 *.py
 ```
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - **Ableton Live** for MIDI export capabilities
 - **PyTorch** team for the deep learning framework
@@ -400,15 +400,15 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **D3.js** community for visualization tools
 - **Music Information Retrieval** research community
 
-## 📞 Support
+## Support
 
-- 📧 **Email**: vladimir@highfunk.uk
-- 🐛 **Issues**: [GitHub Issues](https://github.com/username/repository/issues)
-- 💬 **Discussions**: [GitHub Discussions](https://github.com/username/repository/discussions)
-- 📖 **Documentation**: [Wiki](https://github.com/username/repository/wiki)
+- **Email**: vladimir@highfunk.uk
+- **Issues**: [GitHub Issues](https://github.com/username/repository/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/username/repository/discussions)
+- **Documentation**: [Wiki](https://github.com/username/repository/wiki)
 
 ---
 
-🎵 **Ready to revolutionize electronic music generation with high-dimensional latent spaces!**
+**Ready to revolutionize electronic music generation with high-dimensional latent spaces!**
 
 *Built with ❤️ for the music AI research community*
