@@ -1,0 +1,397 @@
+2025-07-21 11:44:37 [WARNING] app.main: Frontend static files not found
+2025-07-21 11:44:43 [WARNING] app.main: Frontend static files not found
+2025-07-21 11:44:43 [INFO] app.main: Starting IDM Latent Space API
+2025-07-21 11:44:43 [ERROR] app.core.database: Error creating database tables: password authentication failed for user "postgres"
+2025-07-21 11:44:56 [WARNING] app.main: Frontend static files not found
+2025-07-21 11:44:56 [INFO] app.main: Starting IDM Latent Space API
+2025-07-21 11:44:56 [ERROR] app.core.database: Error creating database tables: password authentication failed for user "postgres"
+2025-07-21 11:45:11 [WARNING] app.main: Frontend static files not found
+2025-07-21 11:45:11 [INFO] app.main: Starting IDM Latent Space API
+2025-07-21 11:45:11 [ERROR] app.core.database: Error creating database tables: password authentication failed for user "postgres"
+2025-07-21 11:45:33 [WARNING] app.main: Frontend static files not found
+2025-07-21 11:45:33 [INFO] app.main: Starting IDM Latent Space API
+2025-07-21 11:45:33 [INFO] sqlalchemy.engine.Engine: select pg_catalog.version()
+2025-07-21 11:45:33 [INFO] sqlalchemy.engine.Engine: [raw sql] ()
+2025-07-21 11:45:33 [INFO] sqlalchemy.engine.Engine: select current_schema()
+2025-07-21 11:45:33 [INFO] sqlalchemy.engine.Engine: [raw sql] ()
+2025-07-21 11:45:33 [INFO] sqlalchemy.engine.Engine: show standard_conforming_strings
+2025-07-21 11:45:33 [INFO] sqlalchemy.engine.Engine: [raw sql] ()
+2025-07-21 11:45:33 [INFO] sqlalchemy.engine.Engine: BEGIN (implicit)
+2025-07-21 11:45:33 [INFO] sqlalchemy.engine.Engine: SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-07-21 11:45:33 [INFO] sqlalchemy.engine.Engine: [generated in 0.00018s] ('datasets', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-07-21 11:45:33 [INFO] sqlalchemy.engine.Engine: SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-07-21 11:45:33 [INFO] sqlalchemy.engine.Engine: [cached since 0.00274s ago] ('presets', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-07-21 11:45:33 [INFO] sqlalchemy.engine.Engine: SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-07-21 11:45:33 [INFO] sqlalchemy.engine.Engine: [cached since 0.003253s ago] ('dataset_files', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-07-21 11:45:33 [INFO] sqlalchemy.engine.Engine: SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-07-21 11:45:33 [INFO] sqlalchemy.engine.Engine: [cached since 0.004017s ago] ('preprocessing_jobs', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-07-21 11:45:33 [INFO] sqlalchemy.engine.Engine: SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-07-21 11:45:33 [INFO] sqlalchemy.engine.Engine: [cached since 0.004837s ago] ('ml_models', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-07-21 11:45:33 [INFO] sqlalchemy.engine.Engine: SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-07-21 11:45:33 [INFO] sqlalchemy.engine.Engine: [cached since 0.005292s ago] ('training_jobs', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-07-21 11:45:33 [INFO] sqlalchemy.engine.Engine: SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-07-21 11:45:33 [INFO] sqlalchemy.engine.Engine: [cached since 0.005695s ago] ('evaluation_results', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-07-21 11:45:33 [INFO] sqlalchemy.engine.Engine: SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-07-21 11:45:33 [INFO] sqlalchemy.engine.Engine: [cached since 0.005971s ago] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-07-21 11:45:33 [INFO] sqlalchemy.engine.Engine: SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-07-21 11:45:33 [INFO] sqlalchemy.engine.Engine: [cached since 0.006301s ago] ('user_sessions', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-07-21 11:45:33 [INFO] sqlalchemy.engine.Engine: SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-07-21 11:45:33 [INFO] sqlalchemy.engine.Engine: [cached since 0.006927s ago] ('experiments', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-07-21 11:45:33 [INFO] sqlalchemy.engine.Engine: SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-07-21 11:45:33 [INFO] sqlalchemy.engine.Engine: [cached since 0.007509s ago] ('experiment_results', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-07-21 11:45:33 [INFO] sqlalchemy.engine.Engine: 
+CREATE TABLE datasets (
+	id UUID NOT NULL, 
+	name VARCHAR(255) NOT NULL, 
+	description TEXT, 
+	file_count INTEGER, 
+	total_presets INTEGER, 
+	quality_score FLOAT, 
+	meta_data JSON, 
+	status VARCHAR(50), 
+	created_at TIMESTAMP WITH TIME ZONE DEFAULT now(), 
+	updated_at TIMESTAMP WITH TIME ZONE, 
+	PRIMARY KEY (id)
+)
+
+
+2025-07-21 11:45:33 [INFO] sqlalchemy.engine.Engine: [no key 0.00009s] ()
+2025-07-21 11:45:33 [INFO] sqlalchemy.engine.Engine: 
+CREATE TABLE presets (
+	id UUID NOT NULL, 
+	dataset_id UUID NOT NULL, 
+	name VARCHAR(255), 
+	synthesizer_model VARCHAR(100), 
+	bank_number INTEGER, 
+	patch_number INTEGER, 
+	parameters JSON, 
+	meta_data JSON, 
+	quality_score FLOAT, 
+	hash_md5 VARCHAR(32), 
+	raw_data BYTEA, 
+	created_at TIMESTAMP WITH TIME ZONE DEFAULT now(), 
+	PRIMARY KEY (id), 
+	UNIQUE (hash_md5)
+)
+
+
+2025-07-21 11:45:33 [INFO] sqlalchemy.engine.Engine: [no key 0.00011s] ()
+2025-07-21 11:45:33 [INFO] sqlalchemy.engine.Engine: 
+CREATE TABLE dataset_files (
+	id UUID NOT NULL, 
+	dataset_id UUID NOT NULL, 
+	filename VARCHAR(255) NOT NULL, 
+	file_size INTEGER, 
+	file_type VARCHAR(50), 
+	file_path VARCHAR(500), 
+	validation_status VARCHAR(50), 
+	validation_errors JSON, 
+	processed BOOLEAN, 
+	created_at TIMESTAMP WITH TIME ZONE DEFAULT now(), 
+	PRIMARY KEY (id)
+)
+
+
+2025-07-21 11:45:33 [INFO] sqlalchemy.engine.Engine: [no key 0.00010s] ()
+2025-07-21 11:45:33 [INFO] sqlalchemy.engine.Engine: 
+CREATE TABLE preprocessing_jobs (
+	id UUID NOT NULL, 
+	dataset_id UUID NOT NULL, 
+	config JSON, 
+	status VARCHAR(50), 
+	progress FLOAT, 
+	logs TEXT, 
+	error_message TEXT, 
+	result_metadata JSON, 
+	started_at TIMESTAMP WITH TIME ZONE, 
+	completed_at TIMESTAMP WITH TIME ZONE, 
+	created_at TIMESTAMP WITH TIME ZONE DEFAULT now(), 
+	PRIMARY KEY (id)
+)
+
+
+2025-07-21 11:45:33 [INFO] sqlalchemy.engine.Engine: [no key 0.00009s] ()
+2025-07-21 11:45:33 [INFO] sqlalchemy.engine.Engine: 
+CREATE TABLE ml_models (
+	id UUID NOT NULL, 
+	name VARCHAR(255) NOT NULL, 
+	model_type VARCHAR(50) NOT NULL, 
+	version VARCHAR(50), 
+	description TEXT, 
+	architecture JSON, 
+	hyperparameters JSON, 
+	performance_metrics JSON, 
+	model_data BYTEA, 
+	status VARCHAR(50), 
+	created_by UUID, 
+	created_at TIMESTAMP WITH TIME ZONE DEFAULT now(), 
+	updated_at TIMESTAMP WITH TIME ZONE, 
+	PRIMARY KEY (id)
+)
+
+
+2025-07-21 11:45:33 [INFO] sqlalchemy.engine.Engine: [no key 0.00012s] ()
+2025-07-21 11:45:33 [INFO] sqlalchemy.engine.Engine: 
+CREATE TABLE training_jobs (
+	id UUID NOT NULL, 
+	model_id UUID NOT NULL, 
+	dataset_id UUID NOT NULL, 
+	config JSON, 
+	status VARCHAR(50), 
+	progress FLOAT, 
+	current_epoch INTEGER, 
+	total_epochs INTEGER, 
+	loss_history JSON, 
+	validation_history JSON, 
+	logs TEXT, 
+	error_message TEXT, 
+	started_at TIMESTAMP WITH TIME ZONE, 
+	completed_at TIMESTAMP WITH TIME ZONE, 
+	created_at TIMESTAMP WITH TIME ZONE DEFAULT now(), 
+	PRIMARY KEY (id)
+)
+
+
+2025-07-21 11:45:33 [INFO] sqlalchemy.engine.Engine: [no key 0.00013s] ()
+2025-07-21 11:45:33 [INFO] sqlalchemy.engine.Engine: 
+CREATE TABLE evaluation_results (
+	id UUID NOT NULL, 
+	model_id UUID NOT NULL, 
+	dataset_id UUID NOT NULL, 
+	metrics JSON, 
+	confusion_matrix JSON, 
+	feature_importance JSON, 
+	predictions_sample JSON, 
+	evaluation_config JSON, 
+	created_at TIMESTAMP WITH TIME ZONE DEFAULT now(), 
+	PRIMARY KEY (id)
+)
+
+
+2025-07-21 11:45:33 [INFO] sqlalchemy.engine.Engine: [no key 0.00011s] ()
+2025-07-21 11:45:33 [INFO] sqlalchemy.engine.Engine: 
+CREATE TABLE users (
+	id UUID NOT NULL, 
+	email VARCHAR(255) NOT NULL, 
+	username VARCHAR(100) NOT NULL, 
+	full_name VARCHAR(255), 
+	hashed_password VARCHAR(255) NOT NULL, 
+	is_active BOOLEAN, 
+	is_superuser BOOLEAN, 
+	is_verified BOOLEAN, 
+	preferences JSON, 
+	last_login TIMESTAMP WITH TIME ZONE, 
+	login_count INTEGER, 
+	created_at TIMESTAMP WITH TIME ZONE DEFAULT now(), 
+	updated_at TIMESTAMP WITH TIME ZONE, 
+	PRIMARY KEY (id)
+)
+
+
+2025-07-21 11:45:33 [INFO] sqlalchemy.engine.Engine: [no key 0.00011s] ()
+2025-07-21 11:45:33 [INFO] sqlalchemy.engine.Engine: CREATE UNIQUE INDEX ix_users_email ON users (email)
+2025-07-21 11:45:33 [INFO] sqlalchemy.engine.Engine: [no key 0.00010s] ()
+2025-07-21 11:45:33 [INFO] sqlalchemy.engine.Engine: CREATE UNIQUE INDEX ix_users_username ON users (username)
+2025-07-21 11:45:33 [INFO] sqlalchemy.engine.Engine: [no key 0.00010s] ()
+2025-07-21 11:45:33 [INFO] sqlalchemy.engine.Engine: 
+CREATE TABLE user_sessions (
+	id UUID NOT NULL, 
+	user_id UUID NOT NULL, 
+	session_token VARCHAR(255) NOT NULL, 
+	ip_address VARCHAR(45), 
+	user_agent TEXT, 
+	is_active BOOLEAN, 
+	expires_at TIMESTAMP WITH TIME ZONE NOT NULL, 
+	last_activity TIMESTAMP WITH TIME ZONE DEFAULT now(), 
+	created_at TIMESTAMP WITH TIME ZONE DEFAULT now(), 
+	PRIMARY KEY (id)
+)
+
+
+2025-07-21 11:45:33 [INFO] sqlalchemy.engine.Engine: [no key 0.00011s] ()
+2025-07-21 11:45:33 [INFO] sqlalchemy.engine.Engine: CREATE INDEX ix_user_sessions_user_id ON user_sessions (user_id)
+2025-07-21 11:45:33 [INFO] sqlalchemy.engine.Engine: [no key 0.00010s] ()
+2025-07-21 11:45:33 [INFO] sqlalchemy.engine.Engine: CREATE UNIQUE INDEX ix_user_sessions_session_token ON user_sessions (session_token)
+2025-07-21 11:45:33 [INFO] sqlalchemy.engine.Engine: [no key 0.00010s] ()
+2025-07-21 11:45:33 [INFO] sqlalchemy.engine.Engine: 
+CREATE TABLE experiments (
+	id UUID NOT NULL, 
+	name VARCHAR(255) NOT NULL, 
+	description TEXT, 
+	experiment_type VARCHAR(100), 
+	config JSON, 
+	parameters JSON, 
+	status VARCHAR(50), 
+	progress FLOAT, 
+	results_summary JSON, 
+	artifacts JSON, 
+	tags JSON, 
+	created_by UUID, 
+	started_at TIMESTAMP WITH TIME ZONE, 
+	completed_at TIMESTAMP WITH TIME ZONE, 
+	created_at TIMESTAMP WITH TIME ZONE DEFAULT now(), 
+	updated_at TIMESTAMP WITH TIME ZONE, 
+	PRIMARY KEY (id)
+)
+
+
+2025-07-21 11:45:33 [INFO] sqlalchemy.engine.Engine: [no key 0.00009s] ()
+2025-07-21 11:45:33 [INFO] sqlalchemy.engine.Engine: 
+CREATE TABLE experiment_results (
+	id UUID NOT NULL, 
+	experiment_id UUID NOT NULL, 
+	result_type VARCHAR(100), 
+	result_name VARCHAR(255), 
+	result_data JSON, 
+	file_path VARCHAR(500), 
+	metrics JSON, 
+	annotations JSON, 
+	created_at TIMESTAMP WITH TIME ZONE DEFAULT now(), 
+	PRIMARY KEY (id)
+)
+
+
+2025-07-21 11:45:33 [INFO] sqlalchemy.engine.Engine: [no key 0.00009s] ()
+2025-07-21 11:45:33 [INFO] sqlalchemy.engine.Engine: CREATE INDEX ix_experiment_results_experiment_id ON experiment_results (experiment_id)
+2025-07-21 11:45:33 [INFO] sqlalchemy.engine.Engine: [no key 0.00010s] ()
+2025-07-21 11:45:33 [INFO] sqlalchemy.engine.Engine: COMMIT
+2025-07-21 11:45:33 [INFO] app.core.database: Database tables created successfully
+2025-07-21 11:45:33 [INFO] app.main: Database initialized
+2025-07-21 11:45:42 [INFO] app.main: Shutting down IDM Latent Space API
+2025-07-21 11:45:57 [WARNING] app.main: Frontend static files not found
+2025-07-21 11:45:57 [INFO] app.main: Starting IDM Latent Space API
+2025-07-21 11:45:57 [INFO] sqlalchemy.engine.Engine: select pg_catalog.version()
+2025-07-21 11:45:57 [INFO] sqlalchemy.engine.Engine: [raw sql] ()
+2025-07-21 11:45:57 [INFO] sqlalchemy.engine.Engine: select current_schema()
+2025-07-21 11:45:57 [INFO] sqlalchemy.engine.Engine: [raw sql] ()
+2025-07-21 11:45:57 [INFO] sqlalchemy.engine.Engine: show standard_conforming_strings
+2025-07-21 11:45:57 [INFO] sqlalchemy.engine.Engine: [raw sql] ()
+2025-07-21 11:45:57 [INFO] sqlalchemy.engine.Engine: BEGIN (implicit)
+2025-07-21 11:45:57 [INFO] sqlalchemy.engine.Engine: SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-07-21 11:45:57 [INFO] sqlalchemy.engine.Engine: [generated in 0.00017s] ('datasets', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-07-21 11:45:57 [INFO] sqlalchemy.engine.Engine: SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-07-21 11:45:57 [INFO] sqlalchemy.engine.Engine: [cached since 0.002147s ago] ('presets', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-07-21 11:45:57 [INFO] sqlalchemy.engine.Engine: SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-07-21 11:45:57 [INFO] sqlalchemy.engine.Engine: [cached since 0.00295s ago] ('dataset_files', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-07-21 11:45:57 [INFO] sqlalchemy.engine.Engine: SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-07-21 11:45:57 [INFO] sqlalchemy.engine.Engine: [cached since 0.003603s ago] ('preprocessing_jobs', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-07-21 11:45:57 [INFO] sqlalchemy.engine.Engine: SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-07-21 11:45:57 [INFO] sqlalchemy.engine.Engine: [cached since 0.004029s ago] ('ml_models', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-07-21 11:45:57 [INFO] sqlalchemy.engine.Engine: SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-07-21 11:45:57 [INFO] sqlalchemy.engine.Engine: [cached since 0.004769s ago] ('training_jobs', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-07-21 11:45:57 [INFO] sqlalchemy.engine.Engine: SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-07-21 11:45:57 [INFO] sqlalchemy.engine.Engine: [cached since 0.005286s ago] ('evaluation_results', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-07-21 11:45:57 [INFO] sqlalchemy.engine.Engine: SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-07-21 11:45:57 [INFO] sqlalchemy.engine.Engine: [cached since 0.005629s ago] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-07-21 11:45:57 [INFO] sqlalchemy.engine.Engine: SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-07-21 11:45:57 [INFO] sqlalchemy.engine.Engine: [cached since 0.005954s ago] ('user_sessions', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-07-21 11:45:57 [INFO] sqlalchemy.engine.Engine: SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-07-21 11:45:57 [INFO] sqlalchemy.engine.Engine: [cached since 0.006256s ago] ('experiments', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-07-21 11:45:57 [INFO] sqlalchemy.engine.Engine: SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-07-21 11:45:57 [INFO] sqlalchemy.engine.Engine: [cached since 0.006524s ago] ('experiment_results', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-07-21 11:45:57 [INFO] sqlalchemy.engine.Engine: COMMIT
+2025-07-21 11:45:57 [INFO] app.core.database: Database tables created successfully
+2025-07-21 11:45:57 [INFO] app.main: Database initialized
+2025-07-21 12:00:51 [INFO] app.main: Shutting down IDM Latent Space API
+2025-07-21 12:00:57 [WARNING] app.main: Frontend static files not found
+2025-07-21 12:00:57 [INFO] app.main: Starting IDM Latent Space API
+2025-07-21 12:00:57 [INFO] sqlalchemy.engine.Engine: select pg_catalog.version()
+2025-07-21 12:00:57 [INFO] sqlalchemy.engine.Engine: [raw sql] ()
+2025-07-21 12:00:57 [INFO] sqlalchemy.engine.Engine: select current_schema()
+2025-07-21 12:00:57 [INFO] sqlalchemy.engine.Engine: [raw sql] ()
+2025-07-21 12:00:57 [INFO] sqlalchemy.engine.Engine: show standard_conforming_strings
+2025-07-21 12:00:57 [INFO] sqlalchemy.engine.Engine: [raw sql] ()
+2025-07-21 12:00:57 [INFO] sqlalchemy.engine.Engine: BEGIN (implicit)
+2025-07-21 12:00:57 [INFO] sqlalchemy.engine.Engine: SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-07-21 12:00:57 [INFO] sqlalchemy.engine.Engine: [generated in 0.00018s] ('datasets', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-07-21 12:00:57 [INFO] sqlalchemy.engine.Engine: SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-07-21 12:00:57 [INFO] sqlalchemy.engine.Engine: [cached since 0.003049s ago] ('presets', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-07-21 12:00:57 [INFO] sqlalchemy.engine.Engine: SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-07-21 12:00:57 [INFO] sqlalchemy.engine.Engine: [cached since 0.003495s ago] ('dataset_files', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-07-21 12:00:57 [INFO] sqlalchemy.engine.Engine: SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-07-21 12:00:57 [INFO] sqlalchemy.engine.Engine: [cached since 0.003803s ago] ('preprocessing_jobs', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-07-21 12:00:57 [INFO] sqlalchemy.engine.Engine: SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-07-21 12:00:57 [INFO] sqlalchemy.engine.Engine: [cached since 0.00467s ago] ('ml_models', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-07-21 12:00:57 [INFO] sqlalchemy.engine.Engine: SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-07-21 12:00:57 [INFO] sqlalchemy.engine.Engine: [cached since 0.005196s ago] ('training_jobs', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-07-21 12:00:57 [INFO] sqlalchemy.engine.Engine: SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-07-21 12:00:57 [INFO] sqlalchemy.engine.Engine: [cached since 0.005832s ago] ('evaluation_results', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-07-21 12:00:57 [INFO] sqlalchemy.engine.Engine: SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-07-21 12:00:57 [INFO] sqlalchemy.engine.Engine: [cached since 0.006225s ago] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-07-21 12:00:57 [INFO] sqlalchemy.engine.Engine: SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-07-21 12:00:57 [INFO] sqlalchemy.engine.Engine: [cached since 0.0065s ago] ('user_sessions', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-07-21 12:00:57 [INFO] sqlalchemy.engine.Engine: SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-07-21 12:00:57 [INFO] sqlalchemy.engine.Engine: [cached since 0.006729s ago] ('experiments', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-07-21 12:00:57 [INFO] sqlalchemy.engine.Engine: SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-07-21 12:00:57 [INFO] sqlalchemy.engine.Engine: [cached since 0.00695s ago] ('experiment_results', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-07-21 12:00:57 [INFO] sqlalchemy.engine.Engine: COMMIT
+2025-07-21 12:00:57 [INFO] app.core.database: Database tables created successfully
+2025-07-21 12:00:57 [INFO] app.main: Database initialized
+2025-07-21 12:01:16 [INFO] uvicorn.access: 127.0.0.1:45564 - "GET /health HTTP/1.1" 200
+2025-07-21 12:01:29 [INFO] uvicorn.access: 127.0.0.1:59434 - "GET /docs HTTP/1.1" 200

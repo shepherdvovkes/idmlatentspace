@@ -18,7 +18,7 @@ class Dataset(Base):
     file_count = Column(Integer, default=0)
     total_presets = Column(Integer, default=0)
     quality_score = Column(Float)
-    metadata = Column(JSON)
+    meta_data = Column(JSON)
     status = Column(String(50), default="uploading")  # uploading, processing, ready, error
     created_at = Column(DateTime(timezone=True), server_default=func.now())
     updated_at = Column(DateTime(timezone=True), onupdate=func.now())
@@ -37,7 +37,7 @@ class Preset(Base):
     bank_number = Column(Integer)
     patch_number = Column(Integer)
     parameters = Column(JSON)
-    metadata = Column(JSON)
+    meta_data = Column(JSON)
     quality_score = Column(Float)
     hash_md5 = Column(String(32), unique=True)
     raw_data = Column(LargeBinary)  # For storing original SysEx data
