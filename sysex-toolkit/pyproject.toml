@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sysex-toolkit"
+dynamic = ["version"]
+description = "Universal SysEx decoder/encoder library for synthesizers"
+readme = "README.md"
+license = {file = "LICENSE"}
+authors = [
+    {name = "SystematicLabs", email = "ovcharov@systematiclabs.com"},
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Multimedia :: Sound/Audio",
+]
+requires-python = ">=3.8"
+dependencies = [
+    "numpy>=1.19.0",
+    "pyyaml>=5.4.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=6.0", "black>=21.0", "flake8>=3.8"]
+examples = ["matplotlib>=3.3.0", "librosa>=0.8.0"]
+ml = ["scikit-learn>=1.0.0"]
+
+[project.scripts]
+sysex-decode = "sysex_toolkit.cli:decode_command"
+sysex-analyze = "sysex_toolkit.cli:analyze_command"
+
+[project.urls]
+Homepage = "https://github.com/SystematicLabs/sysex-toolkit"
+Repository = "https://github.com/SystematicLabs/sysex-toolkit"
+Documentation = "https://github.com/SystematicLabs/sysex-toolkit/wiki"
