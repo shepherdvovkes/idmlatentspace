@@ -174,21 +174,8 @@ idm_glitch_02_seg01_170_massive.mid
 
 Results can be directly used in LaTeX tables:
 
-```latex
-\begin{table}[h!]
-    \centering
-    \caption{Quantitative Evaluation Results}
-    \begin{tabular}{lcccc}
-        \toprule
-        \textbf{Latent Dim.} & \textbf{CC-ME ↓} & \textbf{MR-STFT ↓} & \textbf{D_KL ↓} & \textbf{Note Acc ↑} \\
-        \midrule
-        128 & 0.245 & 0.312 & 2.145 & 0.876 \\
-        384 & 0.142 & 0.198 & 1.756 & 0.902 \\
-        512 & 0.118 & 0.156 & 1.623 & 0.915 \\
-        \bottomrule
-    \end{tabular}
-\end{table}
-```
+![table1](https://github.com/user-attachments/assets/497d304c-8837-44c3-b23f-f62b619174e9)
+
 
 ### Hypothesis Validation
 
