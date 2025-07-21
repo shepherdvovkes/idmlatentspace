@@ -203,6 +203,8 @@ Results can be directly used in LaTeX tables:
 
 ## Advanced Usage
 
+![f2](https://github.com/user-attachments/assets/0d77d63c-0377-4286-9740-0dfadd725941)
+
 ### Custom Metrics
 
 ```python
