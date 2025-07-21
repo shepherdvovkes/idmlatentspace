@@ -641,4 +641,4 @@ def create_config_template(synth_name: str, output_path: Union[str, Path]):
         print(f"❌ Ошибка: {e}")
     
     # Создать шаблон конфигурации
-    create_config_template("Custom Synthesizer
+    create_config_template("Custom Synthesizer")
