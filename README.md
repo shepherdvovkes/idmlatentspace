@@ -1,6 +1,6 @@
 # 🎵 Synthesizer Performance Analyzer & ML Research Platform
 
-> **Комплексная исследовательская платформа для анализа и генерации высокодименсиональных латентных пространств в производстве электронной музыки**
+> **Comprehensive research platform for analyzing and generating high-dimensional latent spaces in electronic music production**
 
 ![Python](https://img.shields.io/badge/Python-3.8+-blue)
 ![Qt](https://img.shields.io/badge/GUI-PySide6-green)
@@ -8,119 +8,119 @@
 ![Status](https://img.shields.io/badge/Status-Research%20Ready-brightgreen)
 ![SysEx](https://img.shields.io/badge/Package-sysex--toolkit-purple)
 
-## 🎯 Обзор проекта
+## 🎯 Project Overview
 
-Это многокомпонентная исследовательская платформа, специализирующаяся на анализе тембровых характеристик электронной музыки с использованием современных методов машинного обучения. Проект реализует методологии, описанные в исследовательской работе по β-VAE с Transformer архитектурами для IDM и Dubstep музыки.
+This is a multi-component research platform specializing in analyzing timbral characteristics of electronic music using modern machine learning methods. The project implements methodologies described in research work on β-VAE with Transformer architectures for IDM and Dubstep music.
 
-### 🌟 Ключевые особенности
+### 🌟 Key Features
 
-- **🎛️ Анализ MIDI+CC**: Обработка MIDI нот с плотной автоматизацией Control Change
-- **🧠 Высокодименсиональные VAE**: Реализация 384-512D латентных пространств для сложного тембрального кодирования  
-- **📊 Исследовательские метрики**: CC Modulation Error, MR-STFT Loss, KL Divergence, Note Accuracy
-- **🎨 Интерактивная визуализация**: D3.js графики для анализа латентного пространства и эволюции CC
-- **📈 Академическая готовность**: Генерация публикационных результатов и таблиц
-- **⚡ Полный пайплайн**: От экспорта Ableton до обученных моделей одной командой
-- **🔌 Универсальная поддержка SysEx**: Работа с любыми синтезаторами через конфигурационные файлы
-- **🎹 Встроенные определения**: Access Virus C, Roland JP-8000 и другие
+- **🎛️ MIDI+CC Analysis**: Processing MIDI notes with dense Control Change automation
+- **🧠 High-Dimensional VAE**: Implementation of 384-512D latent spaces for complex timbral encoding  
+- **📊 Research Metrics**: CC Modulation Error, MR-STFT Loss, KL Divergence, Note Accuracy
+- **🎨 Interactive Visualization**: D3.js charts for latent space analysis and CC evolution
+- **📈 Academic Ready**: Generation of publication-ready results and tables
+- **⚡ Complete Pipeline**: From Ableton export to trained models with one command
+- **🔌 Universal SysEx Support**: Work with any synthesizers through configuration files
+- **🎹 Built-in Definitions**: Access Virus C, Roland JP-8000 and others
 
-## 🚀 Быстрый старт
+## 🚀 Quick Start
 
-### Системные требования
+### System Requirements
 
-**Минимальные:**
-- RAM: 8GB (рекомендуется 16GB)
-- Хранилище: 2GB свободного места
+**Minimum:**
+- RAM: 8GB (16GB recommended)
+- Storage: 2GB free space
 - Python: 3.8+
-- ОС: Windows 10+, macOS 10.15+, Linux
+- OS: Windows 10+, macOS 10.15+, Linux
 
-**Рекомендуемые:**
-- GPU: NVIDIA RTX 3070+ с 8GB VRAM
-- CPU: 8+ ядер для параллельной обработки
-- RAM: 32GB для больших датасетов
-- SSD: Для быстрого I/O при обучении
+**Recommended:**
+- GPU: NVIDIA RTX 3070+ with 8GB VRAM
+- CPU: 8+ cores for parallel processing
+- RAM: 32GB for large datasets
+- SSD: For fast I/O during training
 
-### Установка
+### Installation
 
 ```bash
-# Клонировать репозиторий
+# Clone the repository
 git clone https://github.com/username/synthesizer-performance-analyzer.git
 cd synthesizer-performance-analyzer
 
-# Установить зависимости
+# Install dependencies
 pip install -r requirements.txt
 pip install sysex-toolkit
 
-# Создать директорию для проектов Ableton
+# Create directory for Ableton projects
 mkdir AbletonProjects
 
-# Скопировать ваши .mid файлы из экспорта Ableton Live
+# Copy your .mid files from Ableton Live export
 cp /path/to/your/*.mid AbletonProjects/
 ```
 
-### Использование
+### Usage
 
-#### GUI версия (рекомендуется)
+#### GUI version (recommended)
 ```bash
 python main.py
 ```
 
-#### Командная строка
+#### Command line
 ```bash
-# Запуск полного анализа
+# Run full analysis
 python pipeline.py
 
-# Быстрый тест с сокращенными параметрами
+# Quick test with reduced parameters
 python pipeline.py --config quick_config.yaml
 
-# Пользовательская директория проекта
+# Custom project directory
 python pipeline.py --project-dir ./MyMIDIFiles --output results.json
 ```
 
-#### SysEx анализ
+#### SysEx analysis
 ```bash
-# Декодировать SysEx файл
+# Decode SysEx file
 sysex-decode my_preset.syx --synth access_virus
 
-# Анализ неизвестного SysEx формата
+# Analyze unknown SysEx format
 sysex-analyze unknown_synth.syx
 
-# Пакетная обработка множественных файлов
+# Batch process multiple files
 sysex-batch /path/to/presets/ --synth access_virus
 ```
 
-## 📁 Структура проекта
+## 📁 Project Structure
 
 ```
 synthesizer-performance-analyzer/
-├── 🎹 AbletonProjects/           # Ваши MIDI файлы
+├── 🎹 AbletonProjects/           # Your MIDI files
 │   ├── dubstep_bass_01.mid
 │   ├── idm_glitch_02.mid
 │   └── ...
-├── 🐍 main.py                    # GUI приложение
-├── 🔄 pipeline.py                # Основной анализ backend
-├── 🎨 gui.py                     # Интерфейс PySide6
-├── 📊 data_processor.py          # Обработка данных
-├── 🤖 model.py                   # Transformer VAE модель
-├── 🛠️ utils.py                   # Утилиты и визуализация
-├── 📋 apa.py                     # Анализатор проектов Ableton
-├── 🎵 audio_ml_analyzer.py       # ML анализ аудио
-├── 🎛️ preset_differential_analyzer.py # Анализ пресетов
-├── 📦 sysex-toolkit/             # Универсальная SysEx библиотека
+├── 🐍 main.py                    # GUI application
+├── 🔄 pipeline.py                # Main analysis backend
+├── 🎨 gui.py                     # PySide6 interface
+├── 📊 data_processor.py          # Data processing
+├── 🤖 model.py                   # Transformer VAE model
+├── 🛠️ utils.py                   # Utilities and visualization
+├── 📋 apa.py                     # Ableton project analyzer
+├── 🎵 audio_ml_analyzer.py       # ML audio analysis
+├── 🎛️ preset_differential_analyzer.py # Preset analysis
+├── 📦 sysex-toolkit/             # Universal SysEx library
 │   ├── sysex_toolkit/
 │   ├── examples/
 │   └── tests/
-├── 📂 Samples/                   # Аудио семплы
-├── ⚙️ config.yaml                # Параметры конфигурации
-├── 📖 README.md                  # Этот файл
-└── 📄 kubmlops-3.pdf             # Описание проекта
+├── 📂 Samples/                   # Audio samples
+├── ⚙️ config.yaml                # Configuration parameters
+├── 📖 README.md                  # This file
+└── 📄 kubmlops-3.pdf             # Project description
 ```
 
-## 🎛️ Подготовка файлов Ableton
+## 🎛️ Ableton File Preparation
 
-### Настройки экспорта
+### Export Settings
 
-1. **Солирование синтезаторных треков** (басслайны, лиды с тяжелой автоматизацией)
-2. **Стандартизация CC mapping**:
+1. **Solo synthesizer tracks** (basslines, leads with heavy automation)
+2. **Standardize CC mapping**:
    ```
    CC1  → Filter Cutoff      CC6  → Envelope Decay
    CC2  → Filter Resonance   CC7  → Distortion/Drive  
@@ -128,32 +128,32 @@ synthesizer-performance-analyzer/
    CC4  → LFO Amount        CC9  → Delay Send
    CC5  → Envelope Attack   CC10 → Custom Parameter
    ```
-3. **Экспорт как MIDI** с разрешением 480 PPQ
-4. **4-тактовые сегменты** работают лучше всего для анализа
-5. **Плотная автоматизация** (>5 CC событий на бит) производит лучшие результаты
+3. **Export as MIDI** with 480 PPQ resolution
+4. **4-bar segments** work best for analysis
+5. **Dense automation** (>5 CC events per beat) produces better results
 
-### Соглашение о наименовании файлов
+### File Naming Convention
 
 ```
 genre_synth_project_segment_bpm_synthesizer.mid
 
-Примеры:
+Examples:
 dubstep_bass_01_seg01_140_serum.mid
 idm_glitch_02_seg01_170_massive.mid
 ```
 
-## 📊 Понимание результатов
+## 📊 Understanding Results
 
-### Количественные метрики
+### Quantitative Metrics
 
-| Метрика | Описание | Диапазон | Цель |
+| Metric | Description | Range | Goal |
 |---------|----------|----------|------|
-| **CC-ME** | CC Modulation Error - тембральная точность | 0.0-1.0 | Меньше ↓ |
-| **MR-STFT** | Multi-Resolution STFT Loss - качество звука | 0.0-1.0 | Меньше ↓ |
-| **D_KL** | KL Divergence - регулярность латентного пространства | 0.0+ | Меньше ↓ |
-| **Note Acc** | Точность реконструкции нот | 0.0-1.0 | Больше ↑ |
+| **CC-ME** | CC Modulation Error - timbral accuracy | 0.0-1.0 | Lower ↓ |
+| **MR-STFT** | Multi-Resolution STFT Loss - audio quality | 0.0-1.0 | Lower ↓ |
+| **D_KL** | KL Divergence - latent space regularity | 0.0+ | Lower ↓ |
+| **Note Acc** | Note reconstruction accuracy | 0.0-1.0 | Higher ↑ |
 
-### Ожидаемые результаты
+### Expected Results
 
 ```json
 {
@@ -166,18 +166,18 @@ idm_glitch_02_seg01_170_massive.mid
 }
 ```
 
-**Ключевой инсайт**: Высокодименсиональные латентные пространства (384D, 512D) значительно превосходят традиционные низкодименсиональные подходы для генерации сложных тембров.
+**Key Insight**: High-dimensional latent spaces (384D, 512D) significantly outperform traditional low-dimensional approaches for generating complex timbres.
 
-## 🔬 Исследовательские применения
+## 🔬 Research Applications
 
-### Интеграция в академические работы
+### Academic Integration
 
-Результаты могут быть напрямую использованы в LaTeX таблицах:
+Results can be directly used in LaTeX tables:
 
 ```latex
 \begin{table}[h!]
     \centering
-    \caption{Результаты количественной оценки}
+    \caption{Quantitative Evaluation Results}
     \begin{tabular}{lcccc}
         \toprule
         \textbf{Latent Dim.} & \textbf{CC-ME ↓} & \textbf{MR-STFT ↓} & \textbf{D_KL ↓} & \textbf{Note Acc ↑} \\
@@ -190,64 +190,64 @@ idm_glitch_02_seg01_170_massive.mid
 \end{table}
 ```
 
-### Валидация гипотез
+### Hypothesis Validation
 
-- ✅ **Превосходство высоких размерностей**: 384D+ модели показывают значительно более низкий CC-ME
-- ✅ **Захват тембральной сложности**: Сложная CC автоматизация требует >256D латентных пространств  
-- ✅ **Жанрово-специфичное кодирование**: IDM vs Dubstep паттерны появляются в латентном пространстве
-- ✅ **Эффективность архитектуры**: Transformer + β-VAE хорошо обрабатывает последовательные CC данные
+- ✅ **High-dimensional superiority**: 384D+ models show significantly lower CC-ME
+- ✅ **Timbral complexity capture**: Complex CC automation requires >256D latent spaces  
+- ✅ **Genre-specific encoding**: IDM vs Dubstep patterns emerge in latent space
+- ✅ **Architecture efficiency**: Transformer + β-VAE handles sequential CC data well
 
-## 🎨 Визуализации
+## 🎨 Visualizations
 
-### Возможности веб-интерфейса
+### Web Interface Capabilities
 
-1. **Обзор качества датасета** - Таблица со статистикой файлов и оценками качества
-2. **Визуализация латентного пространства** - PCA проекция изученных представлений
-3. **Графики эволюции CC** - Временные ряды автоматизации параметров
-4. **Сравнение архитектур** - Столбчатые диаграммы сравнения производительности моделей
-5. **Обработка в реальном времени** - Мониторинг прогресса с подробными логами
+1. **Dataset Quality Overview** - Table with file statistics and quality scores
+2. **Latent Space Visualization** - PCA projection of learned representations
+3. **CC Evolution Plots** - Time series of parameter automation
+4. **Architecture Comparisons** - Bar charts comparing model performance
+5. **Real-time Processing** - Progress monitoring with detailed logs
 
-### Генерируемые графики
+### Generated Charts
 
-- 📈 **Кривые обучения** (потери vs эпохи)
-- 🎯 **Структура латентного пространства** (PCA, t-SNE)
-- 🎛️ **Анализ использования CC параметров**
-- 📊 **Сравнение производительности** по размерностям
+- 📈 **Training Curves** (loss vs epochs)
+- 🎯 **Latent Space Structure** (PCA, t-SNE)
+- 🎛️ **CC Parameter Usage Analysis**
+- 📊 **Performance Comparison** across dimensions
 
-## 🛠️ Продвинутое использование
+## 🛠️ Advanced Usage
 
-### Пользовательские метрики
+### Custom Metrics
 
 ```python
 from pipeline import AnalysisWorker
 import yaml
 
-# Загрузка конфигурации
+# Load configuration
 with open("config.yaml", "r") as f:
     config = yaml.safe_load(f)
 
-# Запуск анализа с пользовательскими параметрами
+# Run analysis with custom parameters
 worker = AnalysisWorker(config, queue=None)
 results = worker.run()
 
-# Доступ к специфичным метрикам
+# Access specific metrics
 cc_me_384d = results[384]['metrics']['CC-ME']
 print(f"384D CC-ME Score: {cc_me_384d:.4f}")
 ```
 
-### Анализ SysEx пресетов
+### SysEx Preset Analysis
 
 ```python
 from sysex_toolkit import decode_sysex_file, SysExFormat
 
-# Декодирование пресета
+# Decode preset
 presets = decode_sysex_file('my_preset.syx', SysExFormat.ACCESS_VIRUS)
 
-# Доступ к параметрам
+# Access parameters
 for preset in presets:
     print(f"Preset: {preset['metadata']['preset_name']}")
     
-    # Фильтр параметров (отлично для анализа wobble bass)
+    # Filter parameters (great for wobble bass analysis)
     filter_params = {
         name: data for name, data in preset['parameters'].items() 
         if data['category'] == 'filter'
@@ -256,21 +256,21 @@ for preset in presets:
     print(f"Filter cutoff: {filter_params['filter_cutoff']['normalized_value']:.3f}")
 ```
 
-### Интеграция машинного обучения
+### Machine Learning Integration
 
-Идеально для исследований ML в электронной музыке:
+Perfect for ML research in electronic music:
 
 ```python
-# Извлечение признаков для латентного пространства
+# Feature extraction for latent space
 import numpy as np
 from sysex_toolkit import decode_sysex_file
 
 presets = decode_sysex_file('dubstep_presets.syx')
 
-# Создание матрицы признаков для обучения VAE
+# Create feature matrix for VAE training
 feature_matrix = []
 for preset in presets:
-    # Фокус на параметрах фильтра для анализа wobble
+    # Focus on filter parameters for wobble analysis
     wobble_features = []
     for param_name, param_data in preset['parameters'].items():
         if param_data['category'] in ['filter', 'lfo']:
@@ -279,12 +279,12 @@ for preset in presets:
     feature_matrix.append(wobble_features)
 
 feature_matrix = np.array(feature_matrix)
-# Готово для обучения β-VAE!
+# Ready for β-VAE training!
 ```
 
-## ⚙️ Конфигурация
+## ⚙️ Configuration
 
-### Базовая конфигурация (`config.yaml`)
+### Basic Configuration (`config.yaml`)
 
 ```yaml
 data_source:
@@ -301,66 +301,66 @@ model_training:
   batch_size: 16
 ```
 
-### Конфигурация быстрого теста
+### Quick Test Configuration
 
-Для быстрого прототипирования используйте `quick_config.yaml` с сокращенными параметрами:
-- 2 латентные размерности (128D, 384D)
-- 20 эпох
-- Меньшая архитектура модели
+For rapid prototyping use `quick_config.yaml` with reduced parameters:
+- 2 latent dimensions (128D, 384D)
+- 20 epochs
+- Smaller model architecture
 
-## 📦 Поддерживаемые синтезаторы (SysEx Toolkit)
+## 📦 Supported Synthesizers (SysEx Toolkit)
 
-- **Access Virus C** (Полная поддержка)
-- **Roland JP-8000** (Базовая поддержка)
-- **Пользовательские синтезаторы** через конфигурационные файлы
+- **Access Virus C** (Full support)
+- **Roland JP-8000** (Basic support)
+- **Custom synthesizers** via configuration files
 
-## 🎵 Варианты использования
+## 🎵 Use Cases
 
-- **Музыкальное производство**: Анализ и модификация пресетов синтезаторов
-- **ML исследования**: Извлечение признаков для генеративных моделей
-- **Управление пресетами**: Организация и категоризация звуковых библиотек
-- **Звуковой дизайн**: Понимание взаимосвязей параметров
-- **Академические исследования**: Изучение характеристик электронной музыки
+- **Music Production**: Analysis and modification of synthesizer presets
+- **ML Research**: Feature extraction for generative models
+- **Preset Management**: Organization and categorization of sound libraries
+- **Sound Design**: Understanding parameter relationships
+- **Academic Research**: Studying electronic music characteristics
 
-## 📋 Требования к датасету
+## 📋 Dataset Requirements
 
-| Метрика | Минимум | Рекомендуется |
+| Metric | Minimum | Recommended |
 |---------|---------|---------------|
-| Файлы | 10 | 50+ |
-| CC События/сегмент | 50 | 200+ |
-| Длина последовательности | 200 токенов | 500+ токенов |
-| Оценка качества | 70% | 90%+ |
+| Files | 10 | 50+ |
+| CC Events/segment | 50 | 200+ |
+| Sequence length | 200 tokens | 500+ tokens |
+| Quality score | 70% | 90%+ |
 
-## 🔧 Устранение неполадок
+## 🔧 Troubleshooting
 
-### Распространенные проблемы
+### Common Issues
 
-**"MIDI файлы не найдены"**
+**"MIDI files not found"**
 ```bash
-ls -la AbletonProjects/*.mid  # Проверить существование файлов
-chmod 644 AbletonProjects/*   # Исправить права доступа
+ls -la AbletonProjects/*.mid  # Check file existence
+chmod 644 AbletonProjects/*   # Fix file permissions
 ```
 
-**"Недостаточная CC автоматизация"**
-- Убедитесь, что CC контроллеры автоматизированы в Ableton
-- Проверьте, что экспорт включает дорожки автоматизации
-- Проверьте консистентность CC mapping
+**"Insufficient CC automation"**
+- Ensure CC controllers are automated in Ableton
+- Verify export includes automation tracks
+- Check CC mapping consistency
 
 **"CUDA out of memory"**
 ```yaml
 model_training:
-  batch_size: 8     # Уменьшить размер батча
-  model_dim: 256    # Использовать меньшую модель
+  batch_size: 8     # Reduce batch size
+  model_dim: 256    # Use smaller model
 ```
 
-**Низкие оценки качества**
-- Просмотрите консистентность CC mapping между файлами
-- Убедитесь, что 4-тактовые сегменты музыкально согласованы  
-- Проверьте на вариации темпа между экспортами
+**Low quality scores**
+- Review CC mapping consistency between files
+- Ensure 4-bar segments are musically coherent  
+- Check for tempo variations between exports
 
-## 📚 Цитирование
+## 📚 Citation
 
-Если вы используете этот инструмент в своих исследованиях, пожалуйста, цитируйте:
+If you use this tool in your research, please cite:
 
 ```bibtex
 @article{synthesizer_performance_2024,
@@ -378,50 +378,50 @@ model_training:
 }
 ```
 
-## 🤝 Вклад в проект
+## 🤝 Contributing
 
-Мы приветствуем вклады! Пожалуйста, ознакомьтесь с нашими руководящими принципами вклада:
+We welcome contributions! Please see our contribution guidelines:
 
-1. **Fork** репозитория
-2. **Создать** ветку функции
-3. **Добавить** тесты для новой функциональности  
-4. **Отправить** pull request с подробным описанием
+1. **Fork** the repository
+2. **Create** a feature branch
+3. **Add** tests for new functionality  
+4. **Submit** a pull request with detailed description
 
-### Настройка разработки
+### Development Setup
 
 ```bash
-# Установить зависимости разработки
+# Install development dependencies
 pip install -r requirements-dev.txt
 
-# Запустить тесты
+# Run tests
 pytest tests/
 
-# Форматирование кода
+# Code formatting
 black *.py
 flake8 *.py
 ```
 
-## 📄 Лицензия
+## 📄 License
 
-Этот проект лицензирован под лицензией MIT - см. файл [LICENSE](LICENSE) для деталей.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Благодарности
+## 🙏 Acknowledgments
 
-- **Ableton Live** за возможности экспорта MIDI
-- **PyTorch** команде за фреймворк глубокого обучения
-- **PySide6** за современный GUI фреймворк
-- **D3.js** сообществу за инструменты визуализации
-- **Music Information Retrieval** исследовательскому сообществу
+- **Ableton Live** for MIDI export capabilities
+- **PyTorch** team for the deep learning framework
+- **PySide6** for modern GUI framework
+- **D3.js** community for visualization tools
+- **Music Information Retrieval** research community
 
-## 📞 Поддержка
+## 📞 Support
 
 - 📧 **Email**: vladimir@highfunk.uk
 - 🐛 **Issues**: [GitHub Issues](https://github.com/username/repository/issues)
-- 💬 **Обсуждения**: [GitHub Discussions](https://github.com/username/repository/discussions)
-- 📖 **Документация**: [Wiki](https://github.com/username/repository/wiki)
+- 💬 **Discussions**: [GitHub Discussions](https://github.com/username/repository/discussions)
+- 📖 **Documentation**: [Wiki](https://github.com/username/repository/wiki)
 
 ---
 
-🎵 **Готов революционизировать генерацию электронной музыки с высокодименсиональными латентными пространствами!**
+🎵 **Ready to revolutionize electronic music generation with high-dimensional latent spaces!**
 
-*Создано с ❤️ для сообщества исследователей музыкального ИИ*
+*Built with ❤️ for the music AI research community*
