@@ -1,0 +1,28 @@
+# Byte-compiled / optimized / C extensions
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Python virtual environment
+venv/
+
+# Cache and results directories
+cache/
+results/
+
+# Ableton Live projects
+AbletonProjects/
+*.als
+
+# Generated data files and reports
+*.json
+*.csv
+*.txt
+*.pdf
+
+# Synthesizer data files
+*.syx
+
+# OS-specific files
+.DS_Store
