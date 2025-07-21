@@ -395,3 +395,4 @@ WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind 
 2025-07-21 12:00:57 [INFO] app.main: Database initialized
 2025-07-21 12:01:16 [INFO] uvicorn.access: 127.0.0.1:45564 - "GET /health HTTP/1.1" 200
 2025-07-21 12:01:29 [INFO] uvicorn.access: 127.0.0.1:59434 - "GET /docs HTTP/1.1" 200
+2025-07-21 12:59:59 [WARNING] app.main: Frontend static files not found
