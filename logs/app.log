@@ -396,3 +396,330 @@ WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind 
 2025-07-21 12:01:16 [INFO] uvicorn.access: 127.0.0.1:45564 - "GET /health HTTP/1.1" 200
 2025-07-21 12:01:29 [INFO] uvicorn.access: 127.0.0.1:59434 - "GET /docs HTTP/1.1" 200
 2025-07-21 12:59:59 [WARNING] app.main: Frontend static files not found
+2025-07-21 17:22:58 [WARNING] app.main: Frontend static files not found
+2025-07-21 17:23:04 [WARNING] app.main: Frontend static files not found
+2025-07-21 17:23:04 [INFO] app.main: Starting IDM Latent Space API
+2025-07-21 17:23:04 [INFO] sqlalchemy.engine.Engine: BEGIN (implicit)
+2025-07-21 17:23:04 [INFO] sqlalchemy.engine.Engine: PRAGMA main.table_info("datasets")
+2025-07-21 17:23:04 [INFO] sqlalchemy.engine.Engine: [raw sql] ()
+2025-07-21 17:23:04 [INFO] sqlalchemy.engine.Engine: PRAGMA temp.table_info("datasets")
+2025-07-21 17:23:04 [INFO] sqlalchemy.engine.Engine: [raw sql] ()
+2025-07-21 17:23:04 [INFO] sqlalchemy.engine.Engine: PRAGMA main.table_info("presets")
+2025-07-21 17:23:04 [INFO] sqlalchemy.engine.Engine: [raw sql] ()
+2025-07-21 17:23:04 [INFO] sqlalchemy.engine.Engine: PRAGMA temp.table_info("presets")
+2025-07-21 17:23:04 [INFO] sqlalchemy.engine.Engine: [raw sql] ()
+2025-07-21 17:23:04 [INFO] sqlalchemy.engine.Engine: PRAGMA main.table_info("dataset_files")
+2025-07-21 17:23:04 [INFO] sqlalchemy.engine.Engine: [raw sql] ()
+2025-07-21 17:23:04 [INFO] sqlalchemy.engine.Engine: PRAGMA temp.table_info("dataset_files")
+2025-07-21 17:23:04 [INFO] sqlalchemy.engine.Engine: [raw sql] ()
+2025-07-21 17:23:04 [INFO] sqlalchemy.engine.Engine: PRAGMA main.table_info("preprocessing_jobs")
+2025-07-21 17:23:04 [INFO] sqlalchemy.engine.Engine: [raw sql] ()
+2025-07-21 17:23:04 [INFO] sqlalchemy.engine.Engine: PRAGMA temp.table_info("preprocessing_jobs")
+2025-07-21 17:23:04 [INFO] sqlalchemy.engine.Engine: [raw sql] ()
+2025-07-21 17:23:04 [INFO] sqlalchemy.engine.Engine: PRAGMA main.table_info("ml_models")
+2025-07-21 17:23:04 [INFO] sqlalchemy.engine.Engine: [raw sql] ()
+2025-07-21 17:23:04 [INFO] sqlalchemy.engine.Engine: PRAGMA temp.table_info("ml_models")
+2025-07-21 17:23:04 [INFO] sqlalchemy.engine.Engine: [raw sql] ()
+2025-07-21 17:23:04 [INFO] sqlalchemy.engine.Engine: PRAGMA main.table_info("training_jobs")
+2025-07-21 17:23:04 [INFO] sqlalchemy.engine.Engine: [raw sql] ()
+2025-07-21 17:23:04 [INFO] sqlalchemy.engine.Engine: PRAGMA temp.table_info("training_jobs")
+2025-07-21 17:23:04 [INFO] sqlalchemy.engine.Engine: [raw sql] ()
+2025-07-21 17:23:04 [INFO] sqlalchemy.engine.Engine: PRAGMA main.table_info("evaluation_results")
+2025-07-21 17:23:04 [INFO] sqlalchemy.engine.Engine: [raw sql] ()
+2025-07-21 17:23:04 [INFO] sqlalchemy.engine.Engine: PRAGMA temp.table_info("evaluation_results")
+2025-07-21 17:23:04 [INFO] sqlalchemy.engine.Engine: [raw sql] ()
+2025-07-21 17:23:04 [INFO] sqlalchemy.engine.Engine: PRAGMA main.table_info("users")
+2025-07-21 17:23:04 [INFO] sqlalchemy.engine.Engine: [raw sql] ()
+2025-07-21 17:23:04 [INFO] sqlalchemy.engine.Engine: PRAGMA temp.table_info("users")
+2025-07-21 17:23:04 [INFO] sqlalchemy.engine.Engine: [raw sql] ()
+2025-07-21 17:23:04 [INFO] sqlalchemy.engine.Engine: PRAGMA main.table_info("user_sessions")
+2025-07-21 17:23:04 [INFO] sqlalchemy.engine.Engine: [raw sql] ()
+2025-07-21 17:23:04 [INFO] sqlalchemy.engine.Engine: PRAGMA temp.table_info("user_sessions")
+2025-07-21 17:23:04 [INFO] sqlalchemy.engine.Engine: [raw sql] ()
+2025-07-21 17:23:04 [INFO] sqlalchemy.engine.Engine: PRAGMA main.table_info("experiments")
+2025-07-21 17:23:04 [INFO] sqlalchemy.engine.Engine: [raw sql] ()
+2025-07-21 17:23:04 [INFO] sqlalchemy.engine.Engine: PRAGMA temp.table_info("experiments")
+2025-07-21 17:23:04 [INFO] sqlalchemy.engine.Engine: [raw sql] ()
+2025-07-21 17:23:04 [INFO] sqlalchemy.engine.Engine: PRAGMA main.table_info("experiment_results")
+2025-07-21 17:23:04 [INFO] sqlalchemy.engine.Engine: [raw sql] ()
+2025-07-21 17:23:04 [INFO] sqlalchemy.engine.Engine: PRAGMA temp.table_info("experiment_results")
+2025-07-21 17:23:04 [INFO] sqlalchemy.engine.Engine: [raw sql] ()
+2025-07-21 17:23:04 [INFO] sqlalchemy.engine.Engine: 
+CREATE TABLE datasets (
+	id UUID NOT NULL, 
+	name VARCHAR(255) NOT NULL, 
+	description TEXT, 
+	file_count INTEGER, 
+	total_presets INTEGER, 
+	quality_score FLOAT, 
+	meta_data JSON, 
+	status VARCHAR(50), 
+	created_at DATETIME DEFAULT CURRENT_TIMESTAMP, 
+	updated_at DATETIME, 
+	PRIMARY KEY (id)
+)
+
+
+2025-07-21 17:23:04 [INFO] sqlalchemy.engine.Engine: [no key 0.00011s] ()
+2025-07-21 17:23:04 [INFO] sqlalchemy.engine.Engine: 
+CREATE TABLE presets (
+	id UUID NOT NULL, 
+	dataset_id UUID NOT NULL, 
+	name VARCHAR(255), 
+	synthesizer_model VARCHAR(100), 
+	bank_number INTEGER, 
+	patch_number INTEGER, 
+	parameters JSON, 
+	meta_data JSON, 
+	quality_score FLOAT, 
+	hash_md5 VARCHAR(32), 
+	raw_data BLOB, 
+	created_at DATETIME DEFAULT CURRENT_TIMESTAMP, 
+	PRIMARY KEY (id), 
+	UNIQUE (hash_md5)
+)
+
+
+2025-07-21 17:23:04 [INFO] sqlalchemy.engine.Engine: [no key 0.00013s] ()
+2025-07-21 17:23:04 [INFO] sqlalchemy.engine.Engine: 
+CREATE TABLE dataset_files (
+	id UUID NOT NULL, 
+	dataset_id UUID NOT NULL, 
+	filename VARCHAR(255) NOT NULL, 
+	file_size INTEGER, 
+	file_type VARCHAR(50), 
+	file_path VARCHAR(500), 
+	validation_status VARCHAR(50), 
+	validation_errors JSON, 
+	processed BOOLEAN, 
+	created_at DATETIME DEFAULT CURRENT_TIMESTAMP, 
+	PRIMARY KEY (id)
+)
+
+
+2025-07-21 17:23:04 [INFO] sqlalchemy.engine.Engine: [no key 0.00014s] ()
+2025-07-21 17:23:04 [INFO] sqlalchemy.engine.Engine: 
+CREATE TABLE preprocessing_jobs (
+	id UUID NOT NULL, 
+	dataset_id UUID NOT NULL, 
+	config JSON, 
+	status VARCHAR(50), 
+	progress FLOAT, 
+	logs TEXT, 
+	error_message TEXT, 
+	result_metadata JSON, 
+	started_at DATETIME, 
+	completed_at DATETIME, 
+	created_at DATETIME DEFAULT CURRENT_TIMESTAMP, 
+	PRIMARY KEY (id)
+)
+
+
+2025-07-21 17:23:04 [INFO] sqlalchemy.engine.Engine: [no key 0.00014s] ()
+2025-07-21 17:23:04 [INFO] sqlalchemy.engine.Engine: 
+CREATE TABLE ml_models (
+	id UUID NOT NULL, 
+	name VARCHAR(255) NOT NULL, 
+	model_type VARCHAR(50) NOT NULL, 
+	version VARCHAR(50), 
+	description TEXT, 
+	architecture JSON, 
+	hyperparameters JSON, 
+	performance_metrics JSON, 
+	model_data BLOB, 
+	status VARCHAR(50), 
+	created_by UUID, 
+	created_at DATETIME DEFAULT CURRENT_TIMESTAMP, 
+	updated_at DATETIME, 
+	PRIMARY KEY (id)
+)
+
+
+2025-07-21 17:23:04 [INFO] sqlalchemy.engine.Engine: [no key 0.00013s] ()
+2025-07-21 17:23:04 [INFO] sqlalchemy.engine.Engine: 
+CREATE TABLE training_jobs (
+	id UUID NOT NULL, 
+	model_id UUID NOT NULL, 
+	dataset_id UUID NOT NULL, 
+	config JSON, 
+	status VARCHAR(50), 
+	progress FLOAT, 
+	current_epoch INTEGER, 
+	total_epochs INTEGER, 
+	loss_history JSON, 
+	validation_history JSON, 
+	logs TEXT, 
+	error_message TEXT, 
+	started_at DATETIME, 
+	completed_at DATETIME, 
+	created_at DATETIME DEFAULT CURRENT_TIMESTAMP, 
+	PRIMARY KEY (id)
+)
+
+
+2025-07-21 17:23:04 [INFO] sqlalchemy.engine.Engine: [no key 0.00013s] ()
+2025-07-21 17:23:04 [INFO] sqlalchemy.engine.Engine: 
+CREATE TABLE evaluation_results (
+	id UUID NOT NULL, 
+	model_id UUID NOT NULL, 
+	dataset_id UUID NOT NULL, 
+	metrics JSON, 
+	confusion_matrix JSON, 
+	feature_importance JSON, 
+	predictions_sample JSON, 
+	evaluation_config JSON, 
+	created_at DATETIME DEFAULT CURRENT_TIMESTAMP, 
+	PRIMARY KEY (id)
+)
+
+
+2025-07-21 17:23:04 [INFO] sqlalchemy.engine.Engine: [no key 0.00012s] ()
+2025-07-21 17:23:04 [INFO] sqlalchemy.engine.Engine: 
+CREATE TABLE users (
+	id UUID NOT NULL, 
+	email VARCHAR(255) NOT NULL, 
+	username VARCHAR(100) NOT NULL, 
+	full_name VARCHAR(255), 
+	hashed_password VARCHAR(255) NOT NULL, 
+	is_active BOOLEAN, 
+	is_superuser BOOLEAN, 
+	is_verified BOOLEAN, 
+	preferences JSON, 
+	last_login DATETIME, 
+	login_count INTEGER, 
+	created_at DATETIME DEFAULT CURRENT_TIMESTAMP, 
+	updated_at DATETIME, 
+	PRIMARY KEY (id)
+)
+
+
+2025-07-21 17:23:04 [INFO] sqlalchemy.engine.Engine: [no key 0.00016s] ()
+2025-07-21 17:23:04 [INFO] sqlalchemy.engine.Engine: CREATE UNIQUE INDEX ix_users_username ON users (username)
+2025-07-21 17:23:04 [INFO] sqlalchemy.engine.Engine: [no key 0.00015s] ()
+2025-07-21 17:23:04 [INFO] sqlalchemy.engine.Engine: CREATE UNIQUE INDEX ix_users_email ON users (email)
+2025-07-21 17:23:04 [INFO] sqlalchemy.engine.Engine: [no key 0.00010s] ()
+2025-07-21 17:23:04 [INFO] sqlalchemy.engine.Engine: 
+CREATE TABLE user_sessions (
+	id UUID NOT NULL, 
+	user_id UUID NOT NULL, 
+	session_token VARCHAR(255) NOT NULL, 
+	ip_address VARCHAR(45), 
+	user_agent TEXT, 
+	is_active BOOLEAN, 
+	expires_at DATETIME NOT NULL, 
+	last_activity DATETIME DEFAULT CURRENT_TIMESTAMP, 
+	created_at DATETIME DEFAULT CURRENT_TIMESTAMP, 
+	PRIMARY KEY (id)
+)
+
+
+2025-07-21 17:23:04 [INFO] sqlalchemy.engine.Engine: [no key 0.00012s] ()
+2025-07-21 17:23:04 [INFO] sqlalchemy.engine.Engine: CREATE INDEX ix_user_sessions_user_id ON user_sessions (user_id)
+2025-07-21 17:23:04 [INFO] sqlalchemy.engine.Engine: [no key 0.00008s] ()
+2025-07-21 17:23:04 [INFO] sqlalchemy.engine.Engine: CREATE UNIQUE INDEX ix_user_sessions_session_token ON user_sessions (session_token)
+2025-07-21 17:23:04 [INFO] sqlalchemy.engine.Engine: [no key 0.00017s] ()
+2025-07-21 17:23:04 [INFO] sqlalchemy.engine.Engine: 
+CREATE TABLE experiments (
+	id UUID NOT NULL, 
+	name VARCHAR(255) NOT NULL, 
+	description TEXT, 
+	experiment_type VARCHAR(100), 
+	config JSON, 
+	parameters JSON, 
+	status VARCHAR(50), 
+	progress FLOAT, 
+	results_summary JSON, 
+	artifacts JSON, 
+	tags JSON, 
+	created_by UUID, 
+	started_at DATETIME, 
+	completed_at DATETIME, 
+	created_at DATETIME DEFAULT CURRENT_TIMESTAMP, 
+	updated_at DATETIME, 
+	PRIMARY KEY (id)
+)
+
+
+2025-07-21 17:23:04 [INFO] sqlalchemy.engine.Engine: [no key 0.00013s] ()
+2025-07-21 17:23:04 [INFO] sqlalchemy.engine.Engine: 
+CREATE TABLE experiment_results (
+	id UUID NOT NULL, 
+	experiment_id UUID NOT NULL, 
+	result_type VARCHAR(100), 
+	result_name VARCHAR(255), 
+	result_data JSON, 
+	file_path VARCHAR(500), 
+	metrics JSON, 
+	annotations JSON, 
+	created_at DATETIME DEFAULT CURRENT_TIMESTAMP, 
+	PRIMARY KEY (id)
+)
+
+
+2025-07-21 17:23:04 [INFO] sqlalchemy.engine.Engine: [no key 0.00013s] ()
+2025-07-21 17:23:04 [INFO] sqlalchemy.engine.Engine: CREATE INDEX ix_experiment_results_experiment_id ON experiment_results (experiment_id)
+2025-07-21 17:23:04 [INFO] sqlalchemy.engine.Engine: [no key 0.00012s] ()
+2025-07-21 17:23:04 [INFO] sqlalchemy.engine.Engine: COMMIT
+2025-07-21 17:23:04 [INFO] app.core.database: Database tables created successfully
+2025-07-21 17:23:04 [INFO] app.main: Database initialized
+2025-07-21 17:23:15 [INFO] uvicorn.access: 127.0.0.1:43584 - "GET /docs HTTP/1.1" 200
+2025-07-21 17:24:19 [INFO] app.main: Shutting down IDM Latent Space API
+2025-07-21 17:24:20 [WARNING] app.main: Frontend static files not found
+2025-07-21 17:24:20 [INFO] app.main: Starting IDM Latent Space API
+2025-07-21 17:24:20 [INFO] sqlalchemy.engine.Engine: BEGIN (implicit)
+2025-07-21 17:24:20 [INFO] sqlalchemy.engine.Engine: PRAGMA main.table_info("datasets")
+2025-07-21 17:24:20 [INFO] sqlalchemy.engine.Engine: [raw sql] ()
+2025-07-21 17:24:20 [INFO] sqlalchemy.engine.Engine: PRAGMA main.table_info("presets")
+2025-07-21 17:24:20 [INFO] sqlalchemy.engine.Engine: [raw sql] ()
+2025-07-21 17:24:20 [INFO] sqlalchemy.engine.Engine: PRAGMA main.table_info("dataset_files")
+2025-07-21 17:24:20 [INFO] sqlalchemy.engine.Engine: [raw sql] ()
+2025-07-21 17:24:20 [INFO] sqlalchemy.engine.Engine: PRAGMA main.table_info("preprocessing_jobs")
+2025-07-21 17:24:20 [INFO] sqlalchemy.engine.Engine: [raw sql] ()
+2025-07-21 17:24:20 [INFO] sqlalchemy.engine.Engine: PRAGMA main.table_info("ml_models")
+2025-07-21 17:24:20 [INFO] sqlalchemy.engine.Engine: [raw sql] ()
+2025-07-21 17:24:20 [INFO] sqlalchemy.engine.Engine: PRAGMA main.table_info("training_jobs")
+2025-07-21 17:24:20 [INFO] sqlalchemy.engine.Engine: [raw sql] ()
+2025-07-21 17:24:20 [INFO] sqlalchemy.engine.Engine: PRAGMA main.table_info("evaluation_results")
+2025-07-21 17:24:20 [INFO] sqlalchemy.engine.Engine: [raw sql] ()
+2025-07-21 17:24:20 [INFO] sqlalchemy.engine.Engine: PRAGMA main.table_info("users")
+2025-07-21 17:24:20 [INFO] sqlalchemy.engine.Engine: [raw sql] ()
+2025-07-21 17:24:20 [INFO] sqlalchemy.engine.Engine: PRAGMA main.table_info("user_sessions")
+2025-07-21 17:24:20 [INFO] sqlalchemy.engine.Engine: [raw sql] ()
+2025-07-21 17:24:20 [INFO] sqlalchemy.engine.Engine: PRAGMA main.table_info("experiments")
+2025-07-21 17:24:20 [INFO] sqlalchemy.engine.Engine: [raw sql] ()
+2025-07-21 17:24:20 [INFO] sqlalchemy.engine.Engine: PRAGMA main.table_info("experiment_results")
+2025-07-21 17:24:20 [INFO] sqlalchemy.engine.Engine: [raw sql] ()
+2025-07-21 17:24:20 [INFO] sqlalchemy.engine.Engine: COMMIT
+2025-07-21 17:24:20 [INFO] app.core.database: Database tables created successfully
+2025-07-21 17:24:20 [INFO] app.main: Database initialized
+2025-07-21 17:39:19 [INFO] app.main: Shutting down IDM Latent Space API
+2025-07-21 17:39:51 [WARNING] app.main: Frontend static files not found
+2025-07-21 17:39:51 [INFO] app.main: Starting IDM Latent Space API
+2025-07-21 17:39:51 [INFO] sqlalchemy.engine.Engine: BEGIN (implicit)
+2025-07-21 17:39:51 [INFO] sqlalchemy.engine.Engine: PRAGMA main.table_info("datasets")
+2025-07-21 17:39:51 [INFO] sqlalchemy.engine.Engine: [raw sql] ()
+2025-07-21 17:39:51 [INFO] sqlalchemy.engine.Engine: PRAGMA main.table_info("presets")
+2025-07-21 17:39:51 [INFO] sqlalchemy.engine.Engine: [raw sql] ()
+2025-07-21 17:39:51 [INFO] sqlalchemy.engine.Engine: PRAGMA main.table_info("dataset_files")
+2025-07-21 17:39:51 [INFO] sqlalchemy.engine.Engine: [raw sql] ()
+2025-07-21 17:39:51 [INFO] sqlalchemy.engine.Engine: PRAGMA main.table_info("preprocessing_jobs")
+2025-07-21 17:39:51 [INFO] sqlalchemy.engine.Engine: [raw sql] ()
+2025-07-21 17:39:51 [INFO] sqlalchemy.engine.Engine: PRAGMA main.table_info("ml_models")
+2025-07-21 17:39:51 [INFO] sqlalchemy.engine.Engine: [raw sql] ()
+2025-07-21 17:39:51 [INFO] sqlalchemy.engine.Engine: PRAGMA main.table_info("training_jobs")
+2025-07-21 17:39:51 [INFO] sqlalchemy.engine.Engine: [raw sql] ()
+2025-07-21 17:39:51 [INFO] sqlalchemy.engine.Engine: PRAGMA main.table_info("evaluation_results")
+2025-07-21 17:39:51 [INFO] sqlalchemy.engine.Engine: [raw sql] ()
+2025-07-21 17:39:51 [INFO] sqlalchemy.engine.Engine: PRAGMA main.table_info("users")
+2025-07-21 17:39:51 [INFO] sqlalchemy.engine.Engine: [raw sql] ()
+2025-07-21 17:39:51 [INFO] sqlalchemy.engine.Engine: PRAGMA main.table_info("user_sessions")
+2025-07-21 17:39:51 [INFO] sqlalchemy.engine.Engine: [raw sql] ()
+2025-07-21 17:39:51 [INFO] sqlalchemy.engine.Engine: PRAGMA main.table_info("experiments")
+2025-07-21 17:39:51 [INFO] sqlalchemy.engine.Engine: [raw sql] ()
+2025-07-21 17:39:51 [INFO] sqlalchemy.engine.Engine: PRAGMA main.table_info("experiment_results")
+2025-07-21 17:39:51 [INFO] sqlalchemy.engine.Engine: [raw sql] ()
+2025-07-21 17:39:51 [INFO] sqlalchemy.engine.Engine: COMMIT
+2025-07-21 17:39:51 [INFO] app.core.database: Database tables created successfully
+2025-07-21 17:39:51 [INFO] app.main: Database initialized
+2025-07-21 17:40:05 [INFO] uvicorn.access: 127.0.0.1:35256 - "GET /docs HTTP/1.1" 200
+2025-07-21 17:41:00 [INFO] uvicorn.access: 127.0.0.1:41580 - "GET /docs HTTP/1.1" 200
