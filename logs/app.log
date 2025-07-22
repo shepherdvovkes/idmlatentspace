@@ -784,3 +784,61 @@ CREATE TABLE experiment_results (
 2025-07-22 03:41:35 [INFO] app.main: Database initialized
 2025-07-22 03:41:45 [INFO] uvicorn.access: 127.0.0.1:52102 - "GET /health HTTP/1.1" 200
 2025-07-22 03:41:50 [INFO] uvicorn.access: 127.0.0.1:42172 - "GET / HTTP/1.1" 200
+2025-07-22 04:25:09 [WARNING] app.main: Frontend static files not found
+2025-07-22 04:25:09 [INFO] app.main: Starting IDM Latent Space API
+2025-07-22 04:25:09 [INFO] sqlalchemy.engine.Engine: BEGIN (implicit)
+2025-07-22 04:25:09 [INFO] sqlalchemy.engine.Engine: PRAGMA main.table_info("datasets")
+2025-07-22 04:25:09 [INFO] sqlalchemy.engine.Engine: [raw sql] ()
+2025-07-22 04:25:09 [INFO] sqlalchemy.engine.Engine: PRAGMA main.table_info("presets")
+2025-07-22 04:25:09 [INFO] sqlalchemy.engine.Engine: [raw sql] ()
+2025-07-22 04:25:09 [INFO] sqlalchemy.engine.Engine: PRAGMA main.table_info("dataset_files")
+2025-07-22 04:25:09 [INFO] sqlalchemy.engine.Engine: [raw sql] ()
+2025-07-22 04:25:09 [INFO] sqlalchemy.engine.Engine: PRAGMA main.table_info("preprocessing_jobs")
+2025-07-22 04:25:09 [INFO] sqlalchemy.engine.Engine: [raw sql] ()
+2025-07-22 04:25:09 [INFO] sqlalchemy.engine.Engine: PRAGMA main.table_info("ml_models")
+2025-07-22 04:25:09 [INFO] sqlalchemy.engine.Engine: [raw sql] ()
+2025-07-22 04:25:09 [INFO] sqlalchemy.engine.Engine: PRAGMA main.table_info("training_jobs")
+2025-07-22 04:25:09 [INFO] sqlalchemy.engine.Engine: [raw sql] ()
+2025-07-22 04:25:09 [INFO] sqlalchemy.engine.Engine: PRAGMA main.table_info("evaluation_results")
+2025-07-22 04:25:09 [INFO] sqlalchemy.engine.Engine: [raw sql] ()
+2025-07-22 04:25:09 [INFO] sqlalchemy.engine.Engine: PRAGMA main.table_info("users")
+2025-07-22 04:25:09 [INFO] sqlalchemy.engine.Engine: [raw sql] ()
+2025-07-22 04:25:09 [INFO] sqlalchemy.engine.Engine: PRAGMA main.table_info("user_sessions")
+2025-07-22 04:25:09 [INFO] sqlalchemy.engine.Engine: [raw sql] ()
+2025-07-22 04:25:09 [INFO] sqlalchemy.engine.Engine: PRAGMA main.table_info("experiments")
+2025-07-22 04:25:09 [INFO] sqlalchemy.engine.Engine: [raw sql] ()
+2025-07-22 04:25:09 [INFO] sqlalchemy.engine.Engine: PRAGMA main.table_info("experiment_results")
+2025-07-22 04:25:09 [INFO] sqlalchemy.engine.Engine: [raw sql] ()
+2025-07-22 04:25:09 [INFO] sqlalchemy.engine.Engine: COMMIT
+2025-07-22 04:25:09 [INFO] app.core.database: Database tables created successfully
+2025-07-22 04:25:09 [INFO] app.main: Database initialized
+2025-07-22 04:25:43 [INFO] app.main: Shutting down IDM Latent Space API
+2025-07-22 04:25:44 [WARNING] app.main: Frontend static files not found
+2025-07-22 04:25:44 [INFO] app.main: Starting IDM Latent Space API
+2025-07-22 04:25:44 [INFO] sqlalchemy.engine.Engine: BEGIN (implicit)
+2025-07-22 04:25:44 [INFO] sqlalchemy.engine.Engine: PRAGMA main.table_info("datasets")
+2025-07-22 04:25:44 [INFO] sqlalchemy.engine.Engine: [raw sql] ()
+2025-07-22 04:25:44 [INFO] sqlalchemy.engine.Engine: PRAGMA main.table_info("presets")
+2025-07-22 04:25:44 [INFO] sqlalchemy.engine.Engine: [raw sql] ()
+2025-07-22 04:25:44 [INFO] sqlalchemy.engine.Engine: PRAGMA main.table_info("dataset_files")
+2025-07-22 04:25:44 [INFO] sqlalchemy.engine.Engine: [raw sql] ()
+2025-07-22 04:25:44 [INFO] sqlalchemy.engine.Engine: PRAGMA main.table_info("preprocessing_jobs")
+2025-07-22 04:25:44 [INFO] sqlalchemy.engine.Engine: [raw sql] ()
+2025-07-22 04:25:44 [INFO] sqlalchemy.engine.Engine: PRAGMA main.table_info("ml_models")
+2025-07-22 04:25:44 [INFO] sqlalchemy.engine.Engine: [raw sql] ()
+2025-07-22 04:25:44 [INFO] sqlalchemy.engine.Engine: PRAGMA main.table_info("training_jobs")
+2025-07-22 04:25:44 [INFO] sqlalchemy.engine.Engine: [raw sql] ()
+2025-07-22 04:25:44 [INFO] sqlalchemy.engine.Engine: PRAGMA main.table_info("evaluation_results")
+2025-07-22 04:25:44 [INFO] sqlalchemy.engine.Engine: [raw sql] ()
+2025-07-22 04:25:44 [INFO] sqlalchemy.engine.Engine: PRAGMA main.table_info("users")
+2025-07-22 04:25:44 [INFO] sqlalchemy.engine.Engine: [raw sql] ()
+2025-07-22 04:25:44 [INFO] sqlalchemy.engine.Engine: PRAGMA main.table_info("user_sessions")
+2025-07-22 04:25:44 [INFO] sqlalchemy.engine.Engine: [raw sql] ()
+2025-07-22 04:25:44 [INFO] sqlalchemy.engine.Engine: PRAGMA main.table_info("experiments")
+2025-07-22 04:25:44 [INFO] sqlalchemy.engine.Engine: [raw sql] ()
+2025-07-22 04:25:44 [INFO] sqlalchemy.engine.Engine: PRAGMA main.table_info("experiment_results")
+2025-07-22 04:25:44 [INFO] sqlalchemy.engine.Engine: [raw sql] ()
+2025-07-22 04:25:44 [INFO] sqlalchemy.engine.Engine: COMMIT
+2025-07-22 04:25:44 [INFO] app.core.database: Database tables created successfully
+2025-07-22 04:25:44 [INFO] app.main: Database initialized
+2025-07-22 04:40:43 [INFO] app.main: Shutting down IDM Latent Space API
